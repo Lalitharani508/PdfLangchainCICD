@@ -2,9 +2,9 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [main]
+    branches: [practice]
   pull_request:
-    branches: [main]
+    branches: [practice]
 
 env:
   IMAGE_NAME: pdf-chunk-viewer

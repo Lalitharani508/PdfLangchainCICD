@@ -54,7 +54,7 @@ deploy:
       - name: Checkout code
         uses: actions/checkout@v5
 
-      - name: Convert repo name to lowercase   # ← ADD THIS STEP
+      - name: Convert repo name to lowercase   # 
         run: |
           echo "REPO_LOWER=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
 
@@ -76,7 +76,3 @@ deploy:
           tags: |
             ghcr.io/${{ env.REPO_LOWER }}/pdf-chunk-viewer:latest
             ghcr.io/${{ env.REPO_LOWER }}/pdf-chunk-viewer:${{ github.sha }}
-```
-
----
-
